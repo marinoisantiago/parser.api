@@ -1,0 +1,7 @@
+CREATE DATABASE IF NOT EXISTS parserdb;
+DROP USER IF EXISTS 'userApi'@'%';
+CREATE USER 'userApi'@'%' IDENTIFIED BY 'user123';
+
+GRANT SELECT, INSERT, CREATE ON parserdb.* TO 'userApi'@'%';
+
+FLUSH PRIVILEGES;
